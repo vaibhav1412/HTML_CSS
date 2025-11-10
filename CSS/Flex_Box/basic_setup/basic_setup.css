@@ -1,0 +1,14 @@
+
+/* Basic_setup */
+/* 💡 Think of it as a smart container that automatically arranges its child elements. */
+.container{
+    display: flex;
+    background-color: aquamarine;
+}
+
+.box{
+  background-color: tomato;
+  margin: 10px;
+  padding: 20px;
+  color: white;
+}

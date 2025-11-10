@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* space between logo & links */
+  align-items: center; /* vertically center */
+  background-color: #232f3e; /* Amazon dark blue */
+  color: white;
+  padding: 10px 20px;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color:  #ff9900;
+}
+.logo .in {
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: #febd69; /* Amazon yellow hover */
+}
+button:hover {
+  background-color: #febd69; /* Amazon yellow hover */
+}

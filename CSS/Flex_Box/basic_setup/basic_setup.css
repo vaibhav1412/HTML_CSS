@@ -1,14 +1,65 @@
 
 /* Basic_setup */
 /* 💡 Think of it as a smart container that automatically arranges its child elements. */
+
 .container{
-    display: flex;
+
+    display: flex; /* to apply flex properties */
     background-color: aquamarine;
+    width:700px;
+    height: 700px;
+
+    /*  main axis properties flex direction : for changing main axis*/
+
+    /*flex-direction: row;*/     /* default */
+    /*flex-direction: row-reverse;*/ /* main axis right to left */
+    /*flex-direction: column; *//* main axis top to bottom */
+    /*flex-direction: column-reverse;*/ /*main axis bottom to top */
+
+    /*Important Flex Container Properties*/
+
+    /* main axis alignment */
+    justify-content: center; /* space-between,space-evenly,space-around,right,left etc */
+
+    /*Align Items (Cross Axis Alignment) */
+    align-items: stretch;   /* default */
+   /* align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+    align-items: baseline;*/
+    align-items: center; 
+
+    flex-wrap:nowrap;/* wrap, wrap-reverse */
+    flex-flow: row wrap;/*A shorthand for flex-direction + flex-wrap.*/
+
+  /*5. Align Content (Multiple Rows Alignment) Works when items wrap into multiple lines.*/
+    /*align-content: flex-start;
+    align-content: flex-end;
+    align-content: center;
+    align-content: space-between;
+    align-content: space-around;
+    align-content: stretch;*/
+    align-content: center;
+
+    gap: 30px; /*Defines spacing between flex items (like margin but cleaner).*/ 
+
+
+
 }
 
 .box{
   background-color: tomato;
+  width: 100px;
+  height:100px;
   margin: 10px;
   padding: 20px;
   color: white;
+  text-align: center;
+
+  /*Individual Item Control*/
+  flex-grow: 1;   /* how much item grows */
+  flex-shrink: 1; /* how much item shrinks */
+  flex-basis: 100px; /* starting width */
+
+  /*flex: 1 1 100px; shothand */
 }

@@ -1,0 +1,69 @@
+
+.container{
+/* 1] to enable grid */
+    display: grid;
+    background-color: aqua;
+
+/* 2] Define Columns & Rows */  
+    /*grid-template-columns:200px 200px 200px; /* create three rows */
+    grid-template-columns:1fr 1fr 1fr ;/*Using fr ,fr = fraction of available space.*/
+    /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+    height:200px;
+   
+/* 3] Gap Between Grid Items  */
+    gap:20px;
+
+    /* 
+    diff autofit and autofill
+    ✔ auto-fit:
+    It "collapses" empty columns (better for responsive design).
+    ✔ auto-fill:
+    It keeps empty tracks visible (not commonly used for cards).*/
+
+    /*grid-template-rows: 65px 65px; /*  for rows same as */ 
+    
+/* 4] Place Items */
+ /*A) Center all items*/
+  /* place-items: centre;  /* shorthand for justify-items and align-items */
+
+ /*B) Align items */
+   /* align-items: center;   /* vertical */
+   /* justify-items: center; /* horizontal */
+
+/* 6] Grid Areas (Website Layout)*/
+    grid-template-areas: 
+    "box1 box1 box1"
+    "box2 box3 box3"
+    "box4 box4 box4";
+    gap: 20px;
+/* 7] Span Rows & Columns (Important)*/
+
+    
+}
+.box1{
+    grid-area: box1;
+    border: solid rgb(169, 27, 27) 2px;
+    background-color: rgb(202, 212, 212);
+    
+}
+.box2{
+    grid-area: box2;
+    border: solid black 2px;
+    background-color: rgb(18, 0, 0);
+    color: azure;
+    
+}
+.box3{
+    grid-area: box3;
+    border: solid rgb(0, 0, 0) 2px;
+    background-color: rgb(18, 12, 123);
+    color: azure;
+    
+}
+.box4{
+    grid-area: box4;
+    border: solid rgb(0, 0, 0) 2px;
+    background-color: rgb(38, 173, 43);
+    color: azure;
+    
+}

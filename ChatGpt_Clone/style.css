@@ -1,0 +1,100 @@
+
+body{
+display:grid;
+grid-template-columns: 1fr 4fr;
+grid-template-areas: "sidebar main";
+height: 100vh;
+width:100vw;
+}
+
+.sidebar{
+   grid-area: sidebar;
+   background-color:gray;
+   color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start; 
+   gap:20px;
+   border-right: solid black 2px;
+
+}
+
+.menu{
+  flex:1;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+.menu-item {
+  text-decoration: none;
+  color: white;
+  display: block;       /* FULL WIDTH */
+  padding: 10px 15px;  
+}
+
+.menu-item:hover {
+  background-color: black;
+}
+
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+.topbar{
+  flex:1;
+  display: flex;
+  justify-content:space-between;
+}
+.topbar button {
+    padding: 7px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.topbar button:first-child {
+    background: #e5e7eb;
+}
+
+
+.topbar button:last-child {
+    background: #10b981;
+    color: white;
+}
+.center-content{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  bottom: 50vh;
+}
+.input-box{
+  border: solid black 2px;
+  border-radius: 30px;
+  width: 45vw;
+  height:50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+input{
+  border: none;
+  outline: none;
+  width: 100vw;
+}
+.plus{
+  cursor: pointer;
+}
+.mic{
+  cursor: pointer;
+}

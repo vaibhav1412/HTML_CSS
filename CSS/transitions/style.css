@@ -1,0 +1,156 @@
+
+/*transitions: Smoothly animate the change of a CSS property from one value to another.*/
+
+/*
+2. Core Transition Properties
+
+There are 4 main parts:
+
+1]transition-property – what to animate
+
+2]transition-duration – how long it takes
+
+3]transition-timing-function – how it moves (speed curve)
+            
+            1. linear
+
+            ➡️ Same speed from start to end.
+
+            2. ease
+
+            ➡️ Slow → Fast → Slow (default).
+
+            3. ease-in
+
+            ➡️ Slow at the start.
+
+            4. ease-out
+
+            ➡️ Slow at the end.
+
+            5. ease-in-out
+
+            ➡️ Slow at start & slow at end.
+
+            6. steps(n)
+
+            ➡️ Moves in jumps (not smooth).
+
+4]transition-delay – when to start 
+*/
+
+/* shorthand:
+transition: property duration timing-function delay */
+
+
+/* Basic page styling */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      padding: 30px;
+    }
+
+    h1{
+          margin-bottom: 10px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .playground {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    
+    /* Common box styling */
+    .box {
+      width: 120px;
+      height: 120px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    /* -------------------------
+       BOX 1 – COLOR + OPACITY
+       ------------------------- */
+    .box1 {
+      background-color: #3498db;
+      opacity: 0.7; /* Opacity in CSS means how transparent an element is. range 0 to 1*/
+
+      /* property | duration | easing */
+      transition: background-color 0.3s ease, opacity 0.3s ease;
+    }
+
+    .box1:hover {
+      background-color: #2ecc71; /* blue → green */
+      opacity: 1;                /* more visible */
+    }
+
+
+    /* -------------------------
+       BOX 2 – SIZE CHANGE
+       width + height
+       ------------------------- */
+    .box2 {
+      background-color: #e67e22;
+
+      /* we animate width and height */
+      transition:
+        width 0.4s ease-out,
+        height 0.4s ease-out;
+    }
+
+    .box2:hover {
+      width: 160px;   /* bigger on hover */
+      height: 160px;
+    }
+        /* -------------------------
+       BOX 3 – MOVE + SCALE
+       + TRANSITION DELAY
+       ------------------------- */
+    .box3 {
+      background-color: #9b59b6;
+
+      /* transform and box-shadow with delay */
+      transition:
+        transform 0.5s ease-in-out 0.1s,  /* delay 0.1s */
+        box-shadow 0.5s ease-in-out 0.1s; /* same delay */
+    }
+
+    .box3:hover {
+      transform: translateY(-10px) scale(1.05); /* up + slightly bigger */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+        /* -------------------------
+       BOX 3 – MOVE + SCALE
+       + TRANSITION DELAY
+       ------------------------- */
+    .box3 {
+      background-color: #9b59b6;
+
+      /* transform and box-shadow with delay */
+      transition:
+        transform 0.5s ease-in-out 0.1s,  /* delay 0.1s */
+        box-shadow 0.5s ease-in-out 0.1s; /* same delay */
+    }
+
+    .box3:hover {
+      transform: translateY(-10px) scale(1.05); /* up + slightly bigger */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }

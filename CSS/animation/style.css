@@ -1,0 +1,52 @@
+
+/* Used when you want animation to start automatically or loop or have multiple steps.
+
+✔ animation: (to start the animation)
+**
+  animation-name: name;
+  animation-duration: time;
+  animation-timing-function: ease | linear | ease-in | ease-out;
+  animation-delay: time;
+  animation-iteration-count: number | infinite;
+  animation-direction: normal | reverse | alternate;
+  animation-fill-mode: none | forwards | backwards | both; 
+
+  shorthand:-
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+
+**
+@keyframes animationName {
+  from {
+    starting style 
+  }
+  to {
+    ending style 
+  }
+}
+OR
+
+@keyframes animationName {
+  0%   { }
+  50%  { }
+  100% { }
+}
+
+  (to describe HOW it moves)
+*/
+
+
+.box{
+
+    width:100px;
+    height: 100px;
+    background-color: aqua;
+    border-radius: 50%;
+    position: relative;
+    animation: move 3s infinite;
+}
+
+@keyframes move{
+
+    from{left:0px}
+    to{left:200px}
+}
